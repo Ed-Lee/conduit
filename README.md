@@ -25,3 +25,29 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+# 實作紀錄
+
+簡單記錄自己實作的過程
+
+## Tags: m-9
+
+重新以目前最新版的Angular建立專案
+
+
+1. `ng new conduit`
+2. `ng g module shared`
+3. 修改shared/shared.module.ts, import modules, export modules
+
+
+## Tags: m-8
+
+1. `ng g c shared/layout/footer --spec false --flat true` 
+2. `ng g c shared/layout/header --spec false --flat true`
+3. 不理解為什麼Header, Footer兩個Component不定義在SharedModule裡面？
+4. `ng g module home`, 修改HomeModule.ts, 定義子路由
+5. `ng g c home/home --flat true --spec false`
+
+		
+		
+
