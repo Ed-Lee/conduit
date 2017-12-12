@@ -7,6 +7,7 @@ import { SharedModule } from './shared';
 import { FooterComponent } from './shared/layout/footer.component';
 import { RouterModule } from '@angular/router';
 import { HomeModule } from './home/home.module';
+import { AuthModule } from './auth/auth.module';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { HomeModule } from './home/home.module';
     BrowserModule,
     SharedModule,
     HomeModule,
+    AuthModule,
     RouterModule.forRoot([], {useHash: true})
   ],
   providers: [],

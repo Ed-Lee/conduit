@@ -49,5 +49,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 5. `ng g c home/home --flat true --spec false`
 
 		
-		
+## Tags: m-7		
 
+1. `ng g m auth`, 設定 routing
+2. `ng g c auth/auth --flat true --spec false`
+3. AuthComponent根據url path判斷sign in or sign up
+4. FormBuilder, FormControl
+5. import AuthModule
+5. header.component.html 加 routerLink, routerLinkActive
