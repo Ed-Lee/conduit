@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { SharedModule } from './shared';
+import { SharedModule, ApiService, UserService } from './shared';
 import { FooterComponent } from './shared/layout/footer.component';
 import { RouterModule } from '@angular/router';
 import { HomeModule } from './home/home.module';
@@ -21,7 +21,7 @@ import { AuthModule } from './auth/auth.module';
     AuthModule,
     RouterModule.forRoot([], {useHash: true})
   ],
-  providers: [],
+  providers: [ApiService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

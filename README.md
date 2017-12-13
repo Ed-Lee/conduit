@@ -56,4 +56,12 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 3. AuthComponent根據url path判斷sign in or sign up
 4. FormBuilder, FormControl
 5. import AuthModule
-5. header.component.html 加 routerLink, routerLinkActive
+6. header.component.html 加 routerLink, routerLinkActive
+
+
+## Tags: m-6 
+1. `ng g service shared/services/api --spec false` 改用 HttpClient
+2. `ng g service shared/services/user --spec false` 
+3. `ng g class shared/models/errors.model`
+4. `ng g class shared/models/user.model`
+5. `ng g c shared/list-errors --flat true --spec false` 不太理解這時候這個component又定義在SharedModule?
