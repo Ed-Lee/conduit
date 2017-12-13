@@ -2,16 +2,17 @@ import { Injectable } from '@angular/core';
 import { User } from '../models';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import 'rxjs/add/operator/distinctUntilChanged';
-import 'rxjs/add/operator/map';
 import { Observable } from 'rxjs/Rx';
 import { ApiService } from './api.service';
+import { ReplaySubject } from 'rxjs/ReplaySubject';
 
 @Injectable()
 export class UserService {
 
   private currentUserSubject = new BehaviorSubject<User>(new User());
   public currentUser = this.currentUserSubject.asObservable().distinctUntilChanged();
-  private isAuthenticatedSubject = new BehaviorSubject<boolean>(false);
+  //private isAuthenticatedSubject = new BehaviorSubject<boolean>(false);
+  private isAuthenticatedSubject =new ReplaySubject<boolean>(1);
   public isAuthenticated = this.isAuthenticatedSubject.asObservable();
 
   constructor(private apiService: ApiService) {

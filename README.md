@@ -69,3 +69,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Tags: m-5
 1. `ng g directive shared/show-authed --spec false`
 2. structual directive, *showAuthed
+
+## ReplaySubject
+private isAuthenticatedSubject =new ReplaySubject<boolean>(1); 改成這樣*showAuthed 就一直不會出現可sign in的連結 ？
