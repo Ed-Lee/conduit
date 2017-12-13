@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { FooterComponent, HeaderComponent } from './layout';
 import { ListErrorsComponent } from './list-errors.component';
+import { ShowAuthedDirective } from './show-authed.directive';
 
 @NgModule({
   imports: [
@@ -22,8 +23,9 @@ import { ListErrorsComponent } from './list-errors.component';
     RouterModule,
     FooterComponent,
     HeaderComponent,
-    ListErrorsComponent
+    ListErrorsComponent,
+    ShowAuthedDirective
   ],
-  declarations: [FooterComponent, HeaderComponent, ListErrorsComponent]
+  declarations: [FooterComponent, HeaderComponent, ListErrorsComponent, ShowAuthedDirective]
 })
 export class SharedModule { }

@@ -65,3 +65,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 3. `ng g class shared/models/errors.model`
 4. `ng g class shared/models/user.model`
 5. `ng g c shared/list-errors --flat true --spec false` 不太理解這時候這個component又定義在SharedModule?
+
+## Tags: m-5
+1. `ng g directive shared/show-authed --spec false`
+2. structual directive, *showAuthed
