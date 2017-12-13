@@ -72,3 +72,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## ReplaySubject
 private isAuthenticatedSubject =new ReplaySubject<boolean>(1); 改成這樣*showAuthed 就一直不會出現可sign in的連結 ？
+
+## Tags: m-4
+1. `ng g service shared/services/jwt --spec false`
+2. Update the ApiService to add authentication headers if a JWT token is present
+3. We also need to add a GET function in order to retrieve a user's data (HttpClient)
+4. Save JWT tokens on successful authentication, expose a purgeAuth method for logging out, and a populate() function to show authenticated user's information, 改使用 isAuthenticatedSubject = new ReplaySubject<boolean>(1), 因為在還沒認證前並不知道ture or false, 而原來建立BehaviorSubject<boolean)(false) 必須給初始值
+5. Update the links to settings and profile and modify the HeaderComponent to show the user's info.
+6. Call the UserService's populate method in the AppComponent's ngOnInit lifecycle method
