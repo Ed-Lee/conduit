@@ -80,3 +80,8 @@ private isAuthenticatedSubject =new ReplaySubject<boolean>(1); 改成這樣*show
 4. Save JWT tokens on successful authentication, expose a purgeAuth method for logging out, and a populate() function to show authenticated user's information, 改使用 isAuthenticatedSubject = new ReplaySubject<boolean>(1), 因為在還沒認證前並不知道ture or false, 而原來建立BehaviorSubject<boolean)(false) 必須給初始值
 5. Update the links to settings and profile and modify the HeaderComponent to show the user's info.
 6. Call the UserService's populate method in the AppComponent's ngOnInit lifecycle method
+
+## Tags: m-4 create a guard for the login and register pages that ensures only a user that's NOT logged in can access.
+1. `ng g service auth/no-auth-guard --spec false` for the AuthModule routes
+2. `ng g service shared/services/auth-guard --spec false`
+3. Import AuthGuard and declare it as a provider in the AppModule
