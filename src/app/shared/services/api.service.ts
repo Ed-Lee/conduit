@@ -49,4 +49,10 @@ export class ApiService {
     })
     .catch(this.formatErrors)
   }
+
+  put(path: string, body: any = {}): Observable<any> {
+    return this.http.put( `${environment.api_url}${path}`, JSON.stringify(body), { headers: this.setHeaders() })
+    .catch(this.formatErrors);
+  }
+
 }

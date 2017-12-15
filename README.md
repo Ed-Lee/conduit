@@ -85,3 +85,11 @@ private isAuthenticatedSubject =new ReplaySubject<boolean>(1); 改成這樣*show
 1. `ng g service auth/no-auth-guard --spec false` for the AuthModule routes
 2. `ng g service shared/services/auth-guard --spec false`
 3. Import AuthGuard and declare it as a provider in the AppModule
+
+## Tags: m-4 Setting's Page
+1. adding put() function to ApiService
+2. Build out the update function in User Service, UserService 的 update似乎有問題{user} => user ??
+3. `ng g module settings --spec false`, set AuthGuard
+4. `ng g c settings/settings --spec false --flat true`, 這裡要注意SettingsComponent的 errors: Errors
+5. import the SettingsModule into the AppModule
+  
