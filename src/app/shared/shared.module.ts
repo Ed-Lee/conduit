@@ -7,6 +7,8 @@ import { FooterComponent, HeaderComponent } from './layout';
 import { ListErrorsComponent } from './list-errors.component';
 import { ShowAuthedDirective } from './show-authed.directive';
 import { FollowButtonComponent } from './buttons';
+import { ArticleMetaComponent } from './article-helpers/article-meta.component';
+import { FavoriteButtonComponent } from './buttons/favorite-button.component';
 
 @NgModule({
   imports: [
@@ -26,8 +28,10 @@ import { FollowButtonComponent } from './buttons';
     HeaderComponent,
     ListErrorsComponent,
     ShowAuthedDirective,
-    FollowButtonComponent
+    FollowButtonComponent,
+    ArticleMetaComponent,
+    FavoriteButtonComponent
   ],
-  declarations: [FooterComponent, HeaderComponent, ListErrorsComponent, ShowAuthedDirective, FollowButtonComponent]
+  declarations: [FooterComponent, HeaderComponent, ListErrorsComponent, ShowAuthedDirective, FollowButtonComponent, ArticleMetaComponent, FavoriteButtonComponent]
 })
 export class SharedModule { }

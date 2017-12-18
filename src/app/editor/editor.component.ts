@@ -74,7 +74,7 @@ export class EditorComponent implements OnInit {
     .subscribe(
       article => {
         console.log('im in as.subscribe, article = ', article);
-        this.router.navigateByUrl('/editor/' + article.slug)
+        this.router.navigateByUrl('/article/' + article.slug)
       },
       err => {
         this.errors = err;

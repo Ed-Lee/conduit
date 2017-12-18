@@ -118,4 +118,18 @@ private isAuthenticatedSubject =new ReplaySubject<boolean>(1); 改成這樣*show
 6. edit EditorModule, set route path, and editable-article-resolver
 7. Add a link to the editor in the HeaderComponent
 8. 新增文章之後到 /editor/article-slug tag 欄位不見？
+
+## Tags: m-1 Page for Displaying Articles
+1. Add destroy, favorite, and unfavorite methods to the ArticlesService
+2. Create the ArticleModule and import it into AppModule `ng g module article`
+3. Create the ArticleComponent `ng g c article/article --flat true --spec false`
+4. `npm install marked --save`
+5. Create the MarkdownPipe `ng g pipe article/markdown --spec false --flat true`
+6. Create the ArticleResolver `ng g service article/article-resolver -spec false`
+7. Create the ArticleMeta component `ng g c shared/article-helpers/article-meta --spec false --flat true`
+8. Create the FavoriteButton `ng g c shared/buttons/favorite-button --spec false --flat true`
+9. Add the FavoriteButtonComponent and ArticleMetaComponent to the ArticleComponent
+10. Update the EditorComponent to navigate to the article page
+
+
   

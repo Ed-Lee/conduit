@@ -11,6 +11,7 @@ import { AuthModule } from './auth/auth.module';
 import { SettingsModule } from './settings/settings.module';
 import { ProfileModule } from './profile/profile.module';
 import { EditorModule } from './editor/editor.module';
+import { ArticleModule } from './article/article.module';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { EditorModule } from './editor/editor.module';
     SettingsModule,
     ProfileModule,
     EditorModule,
+    ArticleModule,
     RouterModule.forRoot([], {useHash: true})
   ],
   providers: [ApiService, UserService, JwtService, AuthGuard, ProfilesService,
