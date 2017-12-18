@@ -108,4 +108,14 @@ private isAuthenticatedSubject =new ReplaySubject<boolean>(1); 改成這樣*show
 3. Create the FollowButtonComponent `ng g c shared/buttons/follow-button --spec false --flat true` (用到@Input, @Output)
 4. place <follow-button> on the profile page, update profile.component.ts
 5. 總覺得這裡的profile-resolver取得username的方式怪怪的？
+
+## Tags: m-2 Editor for Creating & Editing Articles
+1. Create the Article model `ng g class shared/models/article.model --spec false`
+2. Create the ArticlesService `ng g service shared/services/articles --spec`
+3. Create the EditorModule `ng g module editor`
+4. Create the EditorComponent `ng g c editor/editor --flat true --spec false`
+5. Create the EditableArticleResolver `ng g service editor/editable-article-resolver -spec false`
+6. edit EditorModule, set route path, and editable-article-resolver
+7. Add a link to the editor in the HeaderComponent
+8. 新增文章之後到 /editor/article-slug tag 欄位不見？
   
