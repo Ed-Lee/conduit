@@ -131,5 +131,11 @@ private isAuthenticatedSubject =new ReplaySubject<boolean>(1); 改成這樣*show
 9. Add the FavoriteButtonComponent and ArticleMetaComponent to the ArticleComponent
 10. Update the EditorComponent to navigate to the article page
 
-
+## Tags: m-1 Creating, Displaying, and Deleting Article Comments
+1. Create the Comment model `ng g class shared/models/comment.model --spec false`
+2. Create the CommentsService `ng g service shared/services/comments --spec false`
+3. Create the ArticleComment component `ng g c article/article-comment --spec false --flat true`
+4. Update the ArticleComponent with retrieving, creating, and deleting comments
+5. Update that ArticleComponent template
+6. comment的左下角小圖沒有顯示, demo.productionready.io/main.css裡面沒有？
   
