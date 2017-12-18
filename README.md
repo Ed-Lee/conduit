@@ -138,4 +138,18 @@ private isAuthenticatedSubject =new ReplaySubject<boolean>(1); 改成這樣*show
 4. Update the ArticleComponent with retrieving, creating, and deleting comments
 5. Update that ArticleComponent template
 6. comment的左下角小圖沒有顯示, demo.productionready.io/main.css裡面沒有？
+
+## Tags: m-0 Paginated Article Lists
+1. Create the ArticlePreview component `ng g c shared/article-helpers/article-preview --spec false --flat true`
+2. Create the ArticleListConfig model `ng g class shared/models/article-list-config.model --spec false`
+3. Add a query method to the ArticlesService, 這裡改成用HttpParams, 要注意寫法
+4. Create the ArticleListComponent `ng g c shared/article-helpers/article-list --spec false --flat true`
+5. Create the ProfileArticles component `ng g c profile/profile-articles --spec false --flat true` , (this.route.parent.data.subscribe)
+6. Create the ProfileFavorites component `ng g c profile/profile-favorites --spec false --flat true` 
+7. Modify the ProfileComponent to link between these two pages and contain a child router-outlet. Here we're building out our profile page.
+8. Create new routes to the ProfileArticlesComponent and ProfileFavoritesComponent (children)
+9. Create the TagsService `ng g service shared/services/tags --spec false`
+10. Wire up the TagsService and ArticleListComponent to the HomeComponent
+11. Create the HomeAuthResolver `ng g service home/home-auth-resolver --spec false`
+
   

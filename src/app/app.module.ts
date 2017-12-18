@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { SharedModule, ApiService, UserService, JwtService, AuthGuard, ProfilesService, ArticlesService, CommentsService } from './shared';
+import { SharedModule, ApiService, UserService, JwtService, AuthGuard, ProfilesService, ArticlesService, CommentsService, TagsService } from './shared';
 import { FooterComponent } from './shared/layout/footer.component';
 import { RouterModule } from '@angular/router';
 import { HomeModule } from './home/home.module';
@@ -30,7 +30,7 @@ import { ArticleModule } from './article/article.module';
     RouterModule.forRoot([], {useHash: true})
   ],
   providers: [ApiService, UserService, JwtService, AuthGuard, ProfilesService,
-  ArticlesService, CommentsService],
+  ArticlesService, CommentsService, TagsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
