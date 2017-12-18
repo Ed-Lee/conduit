@@ -3,12 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { SharedModule, ApiService, UserService, JwtService, AuthGuard } from './shared';
+import { SharedModule, ApiService, UserService, JwtService, AuthGuard, ProfilesService } from './shared';
 import { FooterComponent } from './shared/layout/footer.component';
 import { RouterModule } from '@angular/router';
 import { HomeModule } from './home/home.module';
 import { AuthModule } from './auth/auth.module';
 import { SettingsModule } from './settings/settings.module';
+import { ProfileModule } from './profile/profile.module';
 
 
 @NgModule({
@@ -21,9 +22,10 @@ import { SettingsModule } from './settings/settings.module';
     HomeModule,
     AuthModule,
     SettingsModule,
+    ProfileModule,
     RouterModule.forRoot([], {useHash: true})
   ],
-  providers: [ApiService, UserService, JwtService, AuthGuard],
+  providers: [ApiService, UserService, JwtService, AuthGuard, ProfilesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

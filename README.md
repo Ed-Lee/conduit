@@ -92,4 +92,13 @@ private isAuthenticatedSubject =new ReplaySubject<boolean>(1); 改成這樣*show
 3. `ng g module settings --spec false`, set AuthGuard
 4. `ng g c settings/settings --spec false --flat true`, 這裡要注意SettingsComponent的 errors: Errors
 5. import the SettingsModule into the AppModule
+
+## Profile Page
+1. create profile model
+2. `ng g s shared/services/profile --spec false`
+3. create the profile module `ng g module profile`
+4. create the profile component `ng g c profile/profile --flat true --spec false`
+5. Create the ProfileResolver `ng g service profile/profile-resolver -spec false`
+6. edit ProfileModule, set route path, and profile-resolver
+7. 做到這裡很奇怪直接打不對的username, 並不會打到/, 而是點什麼都不work ???????
   
