@@ -55,4 +55,14 @@ export class ApiService {
     .catch(this.formatErrors);
   }
 
+  delete(path: string): Observable<any> {
+    return this.http.delete(`${environment.api_url}${path}`,
+    {
+      headers: this.setHeaders()
+    })
+    .catch(this.formatErrors);
+  }
+
+
+
 }

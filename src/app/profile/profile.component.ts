@@ -27,9 +27,14 @@ export class ProfileComponent implements OnInit {
     // Load the current user's data
     this.userService.currentUser.subscribe(
       (userData: User) => {
+        console.log('userService.currentUser : ', userData);
         this.currentUser = userData;
         this.isUser = (this.currentUser.username === this.profile.username);
       }
     );
+  }
+
+  onToggleFollowing(following: boolean) {
+    this.profile.following = following;
   }
 }

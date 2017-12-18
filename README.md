@@ -101,4 +101,11 @@ private isAuthenticatedSubject =new ReplaySubject<boolean>(1); 改成這樣*show
 5. Create the ProfileResolver `ng g service profile/profile-resolver -spec false`
 6. edit ProfileModule, set route path, and profile-resolver
 7. 做到這裡很奇怪直接打不對的username, 並不會打到/, 而是點什麼都不work ???????
+
+## Tags: m-3 Following & Unfollowing Profiles using Button Components
+1. add delete() for ApiService
+2. Add follow and unfollow methods to the ProfileService
+3. Create the FollowButtonComponent `ng g c shared/buttons/follow-button --spec false --flat true` (用到@Input, @Output)
+4. place <follow-button> on the profile page, update profile.component.ts
+5. 總覺得這裡的profile-resolver取得username的方式怪怪的？
   

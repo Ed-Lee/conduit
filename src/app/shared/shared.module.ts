@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { FooterComponent, HeaderComponent } from './layout';
 import { ListErrorsComponent } from './list-errors.component';
 import { ShowAuthedDirective } from './show-authed.directive';
+import { FollowButtonComponent } from './buttons';
 
 @NgModule({
   imports: [
@@ -24,8 +25,9 @@ import { ShowAuthedDirective } from './show-authed.directive';
     FooterComponent,
     HeaderComponent,
     ListErrorsComponent,
-    ShowAuthedDirective
+    ShowAuthedDirective,
+    FollowButtonComponent
   ],
-  declarations: [FooterComponent, HeaderComponent, ListErrorsComponent, ShowAuthedDirective]
+  declarations: [FooterComponent, HeaderComponent, ListErrorsComponent, ShowAuthedDirective, FollowButtonComponent]
 })
 export class SharedModule { }
